@@ -1,7 +1,6 @@
 import sys
-
-# จำนวน argument จริง ๆ (ไม่รวมชื่อไฟล์เอง)
-count = len(sys.argv) - 1
-
-# แสดงผล
-print(f"Number of parameters: {count}.")
+args = sys.argv[1:]
+numbers = [int(arg) for arg in args]
+print("Received parameters:", args)
+print("Converted to numbers:", numbers)
+print("Total numbers received:", len(numbers))
